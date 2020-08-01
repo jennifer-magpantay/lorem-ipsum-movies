@@ -1,20 +1,20 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   width: 100%;
   height: auto;
   padding: 1%;
-  background-color: var(--color-dk);
-  color: var(--white);
+  background-color: var(--dk-color);
+  color: white;
   font-size: 12px;
   text-align: center;
 `;
 
-const Content = styled.div `
-display: flex;
-justify-content: space-between;
-text-align: left;
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
 `;
 
 function Footer() {

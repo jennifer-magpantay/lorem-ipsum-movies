@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  display: inline-block;
-  padding: 12px 16px;
+  display: inline;
+  padding: 4px 12px;
+  margin: 5px;
+  font-size: 26px;
+  border: 1px solid var(--white);
   background-color: var(--primary-color);
-  border: none;
-  border-radius: 4px;
   color: var(--white);
-  font-weight: bold;
+  transition: opacity 0.3s;
   &:hover,
   &:focus {
-    transition: opacity 0.3s;
-    opacity: 0.7;
+    opacity: 0.5;
   }
 `;
 

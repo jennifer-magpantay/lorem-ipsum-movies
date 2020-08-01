@@ -3,7 +3,7 @@
 /********** GLOBAL **********/
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 :root {
@@ -11,10 +11,9 @@
   --white: #ffffff;
   --bc-color: #f1f2f6;
   --primary-color: #3498db;
-  --primary-color-dk: #40739e;
-  --secondary-color: #e84393;
-  --secondary-color-dk: #c44569;
-  --color-dk: #2d3436;
+  --warning: #c0392b;
+  --lg-color: #bdc3c7;
+  --dk-color: #2c3e50;
 }
 
 html,
@@ -26,10 +25,27 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: opacity .3s;
+}
+
+a:hover, a:focus {
+  opacity: .5;
+}
+
+img {
+  margin: 5px 20px 5px 5px;
 }
 
 hr {
-  border-top: 0px solid var(--white);
-  margin-top: 25px;
-  margin-bottom: 25px;
+  border-bottom: 1px solid var(--dk-color);
+}
+
+ul {
+  padding: 0;
+  margin: 0;  
+}
+
+li {
+  display: inline;
+  padding-right: 15px;
 }
