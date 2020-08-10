@@ -1,27 +1,32 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/images/logo-12.svg";
-
 import { Link } from "react-router-dom";
+import Logo from "../assets/images/logo.png";
 
+//navbar component that will appear in all screens
+//it will be imported by DefaultTemplate
+//{ Link } has been added to keep the SPA properties
 const NavWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100px;
   align-items: center;
-  padding: 0 2% 0 2%;
+  padding: 1% 2%;
   justify-content: space-between;
-  background-color: #c8d6e5;
-  border-bottom: 0px solid var (--dk-color);
-`;
+  background-color: var(--dk-color); 
+  `;
 
 const LogoImage = styled.img`
-  width: 180px;
+ width: 180px;
+
+ @media (max-width:800px){
+   width: 120px;
+ }
 `;
 
 const LinkNav = styled.div`
-  color: var(--dk-color);
-  font-weight: bold;
+ color: var(--lg-color);
+  font-weight: 500;
 `;
 
 class NavBar extends React.Component {
@@ -37,7 +42,7 @@ class NavBar extends React.Component {
               <Link to="/">HOME </Link>
             </li>
             <li>
-              <Link to="/screens/video">ADD MOVIE </Link>
+              <Link to="/screens/article">ADD ARTICLE </Link>
             </li>
             <li>
               <Link to="/screens/category">ADD CATEGORY </Link>
