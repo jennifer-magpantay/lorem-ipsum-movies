@@ -1,44 +1,60 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import DefaultTemplate from "../templates/DefaultTemplate";
 import MainContainer from "../containers/MainContainer";
 
 const PageWrapper = styled(MainContainer)`
+  height: 80vh;
   background-color: var(--dk-color);
-  padding: 4%;
+  padding: 5%;
+
+  @media (max-width: 800px) {
+    height: 30vh;  
+    padding: 4%;  
+  }
 `;
 
 const Title = styled.h1`
   width: 75%;
-  padding: 40px 0 0 40px;
   margin: 0 0 2% 0;
-  color: var(--label);
+  color: var(--blue);
   font-size: 4.6875em;
+
+  @media (max-width: 800px) {
+    margin: 0;
+    font-size: 1.5em;
+  } 
 `;
 
 const Message = styled.p`
   width: 60%;
-  padding-left: 40px;
   margin: 0 0 2% 0;
   color: var(--white);
   font-size: 1.25em;
   line-height: 1.5;
+
+  @media (max-width: 800px) {
+    width: 65%;
+    margin: 0;
+    font-size: 0.875em;
+    line-height: normal;
+    
+  }
+
 `;
 
 function ErrorScreen() {
   return (
-    <div>
-      <NavBar />
+    <DefaultTemplate>
       <PageWrapper>
         <Title>Yikes! There is something really wrong hapenning here!</Title>
         <Message>
-          It seems that the page yoy are trying to find is not available<br />
+          It seems that the page yoy are trying to find is not available
+          <br />
           Click on the link above to get back to the Home
         </Message>
       </PageWrapper>
-      <Footer />
-    </div>
+    </DefaultTemplate>
   );
 }
 

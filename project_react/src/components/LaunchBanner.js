@@ -14,43 +14,56 @@ const BannerWrapper = styled.div`
   width: 100%;
   height: 80vh;
   align-items: flex-end;
+  justify-content: center;
   padding: 1% 2%;
   background-size: cover;
 
   @media (max-width: 800px) {
-        height: 50vh;
-      
+    height: 50vh;
   }
 `;
 
 const BannerInfoContainer = styled.div`
   width: 60%;
-  margin-bottom: 1%;
+  text-align: center;
 
   & h1 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
 
-  & h2 {    
+  & h2 {
     font-weight: normal;
   }
+ `;
 
-  & Button {
-    width: 130px;
-    margin-bottom: 1%;
-  }  
+const Form = styled.form`
+  display: flex;
+  width: 90%; 
+  margin: auto;
 
-  @media (max-width: 800px) { 
-    display: flex;   
-    flex-direction: column;
-    margin-top: 3%;
-    
+  & input {
+    margin-right: 1%;
   }
+  
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+    & input {
+    margin-bottom: 1%;
+    font-size: 12px;
+  }
+    
+    & Button {
+      width: auto;
+      margin:auto;
+    }
+  }
+
+  
 `;
 
 /********** FUNCTION ***********/
-function Banner() {
+function LaunchBanner() {
   //add same logic code we have used to build and populate the rows
   const [movie, setMovie] = useState([]);
 
@@ -72,13 +85,6 @@ function Banner() {
     }
     fetchData();
   }, []);
-  console.log(movie);
-
-  //avoiding long descriptions for the banner, add the truncate function
-  //it will display a certain amount of characters. if execeeds, will be add ... at the end
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
 
   return (
     <BannerWrapper
@@ -91,16 +97,23 @@ function Banner() {
     >
       <BannerInfoContainer>
         <h1>
-          <mark>{movie?.title || movie?.name || movie?.original_name}</mark>
+          <mark>Get full access within just one click</mark>
         </h1>
         <h2>
-          <mark>{truncate(movie?.overview, 140)}</mark>
-        </h2>      
-          <Button>PLAY</Button>
-          <Button>MY LIST</Button>        
+          <mark>Ready? Enjoy your movie and relax in your favorite chair</mark>
+        </h2>
+        <Form>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Add your email"
+          />
+          <Button>GET STARTED</Button>
+        </Form>
       </BannerInfoContainer>
     </BannerWrapper>
   );
 }
 
-export default Banner;
+export default LaunchBanner;

@@ -1,7 +1,7 @@
 import React from "react";
 import DefaultTemplate from "../templates/DefaultTemplate";
 import SectionLabel from "../components/SectionLabel";
-import FormContainer from "../containers/FormContainer";
+import FormContainer from '../containers/FormContainer';
 import SideContainer from "../containers/SideContainer";
 
 class addArticle extends React.Component {
@@ -51,7 +51,7 @@ class addArticle extends React.Component {
       //also, specify each element/input will receive the changes
       <DefaultTemplate>
         <SideContainer>
-          <SectionLabel>+ ADD ARTICLE</SectionLabel>
+          <SectionLabel>DASHBOARD | NEW ARTICLE</SectionLabel>
           <h1>Add a new Article</h1>
           <ul className="list-form-steps">
             <li>Pick up a title for your new Article</li>
@@ -61,13 +61,13 @@ class addArticle extends React.Component {
           </ul>
         </SideContainer>
         <SideContainer>
-          <FormContainer>
-            <form onSubmit={this.handleSubmit}>
-              <div className="row">
-                <div className="col-25">
+        <FormContainer>                 
+          <form onSubmit={this.handleSubmit}>
+              <div className="form-row">
+                <div className="form-col-reference">
                   <label htmlFor="articleTitle">Title</label>
                 </div>
-                <div className="col-75">
+                <div className="form-col-input">
                   <input
                     type="text"
                     id="articleTitle"
@@ -78,11 +78,11 @@ class addArticle extends React.Component {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="col-25">
+              <div className="form-row">
+                <div className="form-col-reference">
                   <label htmlFor="categoryName">Category</label>
                 </div>
-                <div className="col-75">
+                <div className="form-col-input">
                   <select
                     id="category"
                     className="category"
@@ -96,11 +96,11 @@ class addArticle extends React.Component {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="col-25">
+              <div className="form-row">
+                <div className="form-col-reference">
                   <label htmlFor="articleContent">Content</label>
                 </div>
-                <div className="col-75">
+                <div className="form-col-input">
                   <textarea
                     type="text"
                     id="articleContent"
@@ -111,11 +111,11 @@ class addArticle extends React.Component {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="form-row">
                 <input type="submit" value="SUBMIT" />
               </div>
-            </form>
-          </FormContainer>
+            </form>  
+            </FormContainer>
         </SideContainer>
       </DefaultTemplate>
     );

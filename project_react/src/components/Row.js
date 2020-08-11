@@ -10,7 +10,7 @@ import SectionLabel from "./SectionLabel";
 
 /********** STYLED COMPONENTS ***********/
 const RowWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   padding: 1% 2%;
   background-color: var(--dk-color);
   border-bottom: 1px solid var(--blue);
@@ -31,7 +31,8 @@ const ImgPoster = styled.img`
   object-fit: contain;
   max-width: 250px;
   height: auto;
-  margin: 1px;
+  margin-right: 4px;
+  border-radius: 4px;
   transition: transform 450ms;
   &:hover {
     transform: scale(1.05);
@@ -81,7 +82,7 @@ function Row({ title, fetchUrl }) {
           <ImgPoster 
           key={movie.id}
           src={`${baseUrl}${movie.backdrop_path}`} 
-          alt={movie.name} />
+          alt={movie?.title || movie?.name || movie?.original_name} />
         ))}
       </RowPosterWrapper>
     </RowWrapper>

@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import HomeScreen from './screens/HomeScreen';
+import LaunchScreen from "./screens/LaunchScreen";
 
 const AppWrapper = styled.div`
-background-color: var(--lg-color);
+  background-color: var(--lg-color);
 `;
 
 function App() {
   return (
     <AppWrapper>
-      <HomeScreen />
-      </AppWrapper>
+      <LaunchScreen />
+    </AppWrapper>
   );
 }
 

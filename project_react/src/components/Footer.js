@@ -10,8 +10,8 @@ const FooterWrapper = styled.footer`
   height: auto;
   padding: 1% 2%;
   background-color: var(--dk-color);
-  border-top: 1px solid var(--blue);
-  color: var(--white);
+  border-top: 1px solid var(--lg-color);
+  color: var(--lg-color);
   font-size: 0.75em;
 
   @media (max-width: 800px) {
@@ -51,7 +51,7 @@ function Footer() {
             <a href="http://www.catipsum.com/">Cat Ipsum</a>
           </li>
           <li>
-            <a href="https://www.canva.com/">Canvas</a>
+            <a href="https://www.canva.com/">Canva</a>
           </li>
           <li>
             <a href="https://www.themoviedb.org/">TMDb</a>

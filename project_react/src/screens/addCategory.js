@@ -1,14 +1,14 @@
 import React from "react";
 import DefaultTemplate from "../templates/DefaultTemplate";
 import SideContainer from "../containers/SideContainer";
-import FormContainer from "../containers/FormContainer";
 import SectionLabel from "../components/SectionLabel";
+import FormContainer from "../containers/FormContainer";
 
 function addCategory() {
   return (
     <DefaultTemplate>
       <SideContainer>
-        <SectionLabel>+ ADD CATEGORY</SectionLabel>
+        <SectionLabel>DASHBOARD | NEW CATEGORY</SectionLabel>
         <h1>Add a new Category</h1>
         <ul className="list-form-steps">
           <li>Pick up a name for your new Category</li>
@@ -18,22 +18,22 @@ function addCategory() {
       </SideContainer>
 
       <SideContainer>
-        <FormContainer>
+      <FormContainer>
           <form>
-            <div className="row">
-              <div className="col-25">
+          <div className="form-row">
+                <div className="form-col-reference">
                 <label for="categoryName">Category name</label>
               </div>
-              <div className="col-75">
+              <div className="form-col-input">
                 <input type="text" id="categoryName" name="categoryName" />
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-25">
+            <div className="form-row">
+                <div className="form-col-reference">
                 <label for="categoryDescription">Description</label>
               </div>
-              <div className="col-75">
+              <div className="form-col-input">
                 <textarea
                   type="text"
                   id="categoryDescription"
@@ -42,12 +42,12 @@ function addCategory() {
               </div>
             </div>
 
-            <div class="row">
+            <div class="form-row">
               <input type="submit" value="SUBMIT" />
             </div>
           </form>
         </FormContainer>
-            </SideContainer>
+      </SideContainer>
     </DefaultTemplate>
   );
 }

@@ -13,14 +13,14 @@ const NavWrapper = styled.div`
   align-items: center;
   padding: 1% 2%;
   justify-content: space-between;
-  background-color: var(--dk-color); 
+  background-color: var(--black); 
   `;
 
 const LogoImage = styled.img`
- width: 180px;
-
+ width: 80%;
+ 
  @media (max-width:800px){
-   width: 120px;
+   width: 60%;
  }
 `;
 
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
         <LinkNav>
           <ul>
             <li>
-              <Link to="/">HOME </Link>
+              <Link to="/screens/home">HOME </Link>
             </li>
             <li>
               <Link to="/screens/article">ADD ARTICLE </Link>
@@ -49,7 +49,7 @@ class NavBar extends React.Component {
             </li>
             <li> | </li>
             <li>
-              <Link to="/">LOG IN</Link>
+              <Link to="/screens/home">LOG IN</Link>
             </li>
           </ul>
         </LinkNav>

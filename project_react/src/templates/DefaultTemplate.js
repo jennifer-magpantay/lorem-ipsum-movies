@@ -4,8 +4,9 @@ import MainContainer from "../containers/MainContainer";
 import Footer from "../components/Footer";
 
 //use this as default template for all pages
-//it holds all the common components of the project
-//inside Main container, add the children's content (content of the pages thar are generated from the default one)
+//it holds all the common components of the project: navbar, a main container where we will set in the content we want, and footer
+//inside Main container, we will add the children's content (content of the pages thar are generated from the default one)
+//then the content will be automatically loaded
 
 function DefaultTemplate({ children }) {
   return (

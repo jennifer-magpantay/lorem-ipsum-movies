@@ -7,6 +7,7 @@ const FormContainer = styled.div`
   margin-top: 8%;
   background-color: var(--white);
   border: 1px solid var(--lg-gray);
+  border-radius: 4px;
 
   @media (max-width: 800px) {
     width: 100%;

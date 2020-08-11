@@ -10,9 +10,9 @@
   --black: #000000;
   --white: #ffffff;
   --lg-color:#F2FFF9;
-  --dk-color:#162838;
+  --dk-color:#111111;
   --blue: #56C7D3;
-  --label: #EF3629;
+  --warning: #EF3629;
   --lg-gray: #bdc3c7;
   --dk-gray: #2c3e50;
  }
@@ -31,6 +31,15 @@ a {
 
 a:hover, a:focus {
   opacity: .5;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: normal;
 }
 
 h3 {
@@ -71,41 +80,42 @@ hr {
   border-bottom: 1px solid var(--lg-color);
 }
 
-/* Clear floats after the columns */
-.row:after {
+mark {
+  padding: 0 1% 0 1%;
+  background-color: var(--dk-color);
+  color: var(--white);
+  line-height: inherit;
+  opacity: 0.85;
+}
+
+/* Forms */
+.form-row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Forms */
 .list-form-steps li {
   display: block;
 }
 
-.container {
-  width: 50%;
-  border-radius: 5px;
-  background-color: var(--white);
-  padding: 20px;
-}
-
-.col-25 {
+.form-col-reference {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-.col-75 {
+.form-col-input {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=email], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--lg-gray);
+  border-radius: 4px;
   resize: vertical;
 }
 
@@ -114,7 +124,8 @@ input[type=submit] {
   color: white;
   padding: 12px 20px;
   margin-top: 3px;
-  border: none;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
   cursor: pointer;
   float: right;
 }
@@ -131,7 +142,7 @@ label {
 
 @media only screen and (max-width: 800px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   h2{
