@@ -13,19 +13,19 @@ const NavWrapper = styled.div`
   align-items: center;
   padding: 1% 2%;
   justify-content: space-between;
-  background-color: var(--black); 
-  `;
+  background-color: var(--black);
+`;
 
 const LogoImage = styled.img`
- width: 80%;
- 
- @media (max-width:800px){
-   width: 60%;
- }
+  width: 80%;
+
+  @media (max-width: 800px) {
+    width: 60%;
+  }
 `;
 
 const LinkNav = styled.div`
- color: var(--lg-color);
+  color: var(--lg-color);
   font-weight: 500;
 `;
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SideContainer = styled.div`
   width: 50%;
-  height: 60vh;
+  height: 70vh;
   padding: 4% 2%;
   background-color: var(--lg-color);
  
