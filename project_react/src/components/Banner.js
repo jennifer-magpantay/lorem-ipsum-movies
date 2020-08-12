@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import requests from "../requests";
 import styled from "styled-components";
+import BannerInfoContainer from "../containers/BannerInfoContainer";
 import Button from "../components/Button";
 
 //banners will hold and display a background image of a ramdom movie from our db
@@ -14,38 +15,34 @@ const BannerWrapper = styled.div`
   width: 100%;
   height: 80vh;
   align-items: flex-end;
+  justify-content: left;
   padding: 1% 2%;
   background-size: cover;
 
+  & h1,
+  h2 {
+    text-align: left;
+  }
+
   @media (max-width: 800px) {
-        height: 50vh;
-      
+    height: 75vh;
+    padding-bottom: 2%;
   }
 `;
 
-const BannerInfoContainer = styled.div`
-  width: 60%;
-  margin-bottom: 1%;
-
-  & h1 {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  & h2 {    
-    font-weight: normal;
-  }
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: left;
 
   & Button {
-    width: 130px;
-    margin-bottom: 1%;
-  }  
+    width: 180px;
+  }
 
-  @media (max-width: 800px) { 
-    display: flex;   
-    flex-direction: column;
-    margin-top: 3%;
-    
+  @media (max-width: 800px) {
+    & Button {
+      width: 100px;
+      margin: 1% 2% 0 0;
+    }
   }
 `;
 
@@ -95,9 +92,11 @@ function Banner() {
         </h1>
         <h2>
           <mark>{truncate(movie?.overview, 140)}</mark>
-        </h2>      
+        </h2>
+        <ButtonWrapper>
           <Button>PLAY</Button>
-          <Button>MY LIST</Button>        
+          <Button>MY LIST</Button>
+        </ButtonWrapper>
       </BannerInfoContainer>
     </BannerWrapper>
   );

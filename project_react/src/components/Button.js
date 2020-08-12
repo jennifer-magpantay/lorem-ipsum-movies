@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-
 //button component
+//the main style properties are set here
+//however, each other component that will import button as its own component would be able to add/modify/override any of these properties
 const Button = styled.button`
   width: 200px;
   padding: 12px 20px;
@@ -16,12 +17,12 @@ const Button = styled.button`
 
   &:hover,
   &:focus {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   @media (max-width: 800px) {
-    width: 80px;
     font-size: 12px;
+    padding: 10px;
   }
 `;
 

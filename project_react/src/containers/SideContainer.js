@@ -7,8 +7,10 @@ const SideContainer = styled.div`
   background-color: var(--lg-color);
  
   @media (max-width: 800px) {
+    width: 100%;
+    height: auto;
     width: 100%; 
-    padding: 1% 2%;  
+    padding: 0 2% 4% 2%;  
   }
 `;
 

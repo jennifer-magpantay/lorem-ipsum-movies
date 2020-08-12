@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import requests from "../requests";
 import styled from "styled-components";
+import BannerInfoContainer from '../containers/BannerInfoContainer';
 import Button from "../components/Button";
 
 //banners will hold and display a background image of a ramdom movie from our db
@@ -19,47 +20,25 @@ const BannerWrapper = styled.div`
   background-size: cover;
 
   @media (max-width: 800px) {
-    height: 50vh;
+    height: 82vh;
+    justify-content: left;
   }
 `;
 
-const BannerInfoContainer = styled.div`
-  width: 60%;
-  text-align: center;
-
-  & h1 {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  & h2 {
-    font-weight: normal;
-  }
- `;
-
 const Form = styled.form`
   display: flex;
-  width: 90%; 
+  width: 90%;
   margin: auto;
 
   & input {
     margin-right: 1%;
   }
-  
+
   @media (max-width: 800px) {
-    flex-wrap: wrap;
-    & input {
-    margin-bottom: 1%;
+    width: 100%;
+    margin-bottom: 2%;
     font-size: 12px;
   }
-    
-    & Button {
-      width: auto;
-      margin:auto;
-    }
-  }
-
-  
 `;
 
 /********** FUNCTION ***********/
