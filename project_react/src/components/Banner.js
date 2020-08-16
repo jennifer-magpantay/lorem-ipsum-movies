@@ -53,9 +53,7 @@ function Banner() {
 
   //this will 'load' all movies we have for this base url - Original
   //to pick up and to display just one randomly, use math.floor(math.random) method
-  /*function() { 
-  * arr[Math.floor(Math.random() * arr.length)];
-    }*/
+  /*function() { arr[Math.floor(Math.random() * arr.length)]; }*/
 
   useEffect(() => {
     async function fetchData() {
@@ -76,7 +74,6 @@ function Banner() {
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
-
   return (
     <BannerWrapper
       style={{

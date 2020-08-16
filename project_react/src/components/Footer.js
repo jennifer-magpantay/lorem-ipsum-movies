@@ -27,7 +27,11 @@ const ContentItem = styled.div`
   margin: 5px;
 
   & p {
-    line-height: 6px;
+    line-height: normal;
+  }
+
+  @media (max-width: 800px) {
+    margin-bottom: 10px;
   }
 `;
 

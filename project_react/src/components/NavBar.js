@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
+import Menu from './Menu';
 
 //navbar component that will appear in all screens
+//add to the navbar a responsive menu
 //it will be imported by DefaultTemplate
 //{ Link } has been added to keep the SPA properties
 const NavWrapper = styled.div`
@@ -24,11 +26,6 @@ const LogoImage = styled.img`
   }
 `;
 
-const LinkNav = styled.div`
-  color: var(--lg-color);
-  font-weight: 500;
-`;
-
 class NavBar extends React.Component {
   render() {
     return (
@@ -36,23 +33,7 @@ class NavBar extends React.Component {
         <Link to="/">
           <LogoImage src={Logo} alt="logo" />
         </Link>
-        <LinkNav>
-          <ul>
-            <li>
-              <Link to="/screens/home">HOME </Link>
-            </li>
-            <li>
-              <Link to="/screens/article">ADD ARTICLE </Link>
-            </li>
-            <li>
-              <Link to="/screens/category">ADD CATEGORY </Link>
-            </li>
-            <li> | </li>
-            <li>
-              <Link to="/screens/home">LOG IN</Link>
-            </li>
-          </ul>
-        </LinkNav>
+        <Menu />
       </NavWrapper>
     );
   }

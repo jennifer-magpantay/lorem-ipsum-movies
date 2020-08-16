@@ -12,9 +12,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/screens/home" component={HomeScreen} />
-      <Route path="/screens/article" component={addArticle} />
-      <Route path="/screens/category" component={addCategory} />      
+      <Route path="/home" component={HomeScreen} />
+      <Route path="/article" component={addArticle} />
+      <Route path="/category" component={addCategory} />      
       <Route path="/" component={ErrorScreen} />      
     </Switch>
   </BrowserRouter>,
