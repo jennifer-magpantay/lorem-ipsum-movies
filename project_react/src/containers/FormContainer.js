@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 //container to hold form, applied on AddCategory & AddArticle
+
 const FormContainer = styled.div`
   width: 98%;
   padding: 2%;

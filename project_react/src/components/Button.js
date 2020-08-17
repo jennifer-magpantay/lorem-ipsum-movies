@@ -12,13 +12,15 @@ const Button = styled.button`
   background-color: var(--blue);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   color: var(--white);
   transition: opacity 0.3s;
-
+  
   &:hover,
   &:focus {
     opacity: 0.8;
   }
+}
 
   @media (max-width: 800px) {
     font-size: 12px;

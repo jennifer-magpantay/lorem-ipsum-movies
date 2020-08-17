@@ -10,7 +10,6 @@ import movieTrailer from "movie-trailer";
 //this container will holds a bunch of posters of the movies of the category
 //to load the content of each row, we are about to create a state with different values saved within an array
 
-/********** STYLED COMPONENTS ***********/
 const RowWrapper = styled.div`
   width: 100%;
   padding: 1% 2%;
@@ -35,6 +34,7 @@ const ImgPoster = styled.img`
   height: auto;
   margin-right: 4px;
   border-radius: 4px;
+  cursor: pointer;
   transition: transform 450ms;
   &:hover {
     transform: scale(1.05);
@@ -47,7 +47,6 @@ const ImgPoster = styled.img`
 /********** CONST VARIABLES ***********/
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
-/********** FUNCTIONS ***********/
 //create a function Row using title and the fetchUrl as parameter to display a list of movies from the TMDb (array/list of 20 movies)
 //to populate that, you have to use a snippet of code which runs based on a specific condition/variables
 //when the row is loaded, it will make a request to the TMDB to get the movie information we want accordgin to the fetchUrl we have assigned to  

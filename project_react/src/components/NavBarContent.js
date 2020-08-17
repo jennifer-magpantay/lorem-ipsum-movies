@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 //FullNavBar holds all links and content of the navbar
 //when loaded in full screen we will see the link of the nav bar as usual: displayed inline
 //when is loaded in small screen, then it will displayed as column
+
 const LinkNav = styled.ul`
   display: flex;
   flex-flow: row nowrap;
@@ -13,8 +14,7 @@ const LinkNav = styled.ul`
 
   /*in small screens, the link/content has to be fit in sliding side column that will be active/displayed when clicked*/
   @media (max-width: 800px) {
-    flex-flow: column nowrap;
-    text-align: right;
+    flex-flow: column nowrap;    
     position: fixed;
     padding: 2% 2% 2% 6%;
     top: 80px;
@@ -22,6 +22,7 @@ const LinkNav = styled.ul`
     background-color: var(--black);
     line-height: 50px;
     opacity: 0.9;
+    text-align: right;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     transition: transform 0.5s ease-in-out;
 

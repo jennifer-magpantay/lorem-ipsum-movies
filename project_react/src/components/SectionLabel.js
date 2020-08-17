@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-//component to use fro naming the categories
-//it will be imported by Row
+//component to use for naming the categories - it will be imported by Row
 const SectionLabel = styled.h4`
 text-align: left;
 color: var(--blue);

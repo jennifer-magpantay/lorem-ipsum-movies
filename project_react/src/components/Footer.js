@@ -4,15 +4,14 @@ import behance from "../assets/images/behance_white.png";
 import github from "../assets/images/github_white.png";
 import linkedin from "../assets/images/linkedin_white.png";
 
-//footer component that will be used in all screens
-//it will imported by DefaultTemplate
+//footer is another component that will be used in all screens - it will imported by DefaultTemplate
 const FooterWrapper = styled.footer`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   padding: 1% 2%;
-  background-color: var(--dk-color);
+  background-color: var(--black);
   border-top: 1px solid var(--lg-color);
   color: var(--lg-color);
   font-size: 0.75em;

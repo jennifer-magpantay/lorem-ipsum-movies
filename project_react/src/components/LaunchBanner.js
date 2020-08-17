@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import requests from "../requests";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import BannerInfoContainer from '../containers/BannerInfoContainer';
 import Button from "../components/Button";
 
@@ -9,14 +10,13 @@ import Button from "../components/Button";
 //elements of the page: title, subtitle desciption, buttons to play and to save into a personal list
 //a different movie is loaded everytime the page is refreshed
 
-/********** STYLED COMPONENTS ***********/
 const BannerWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 95vh;
   align-items: flex-end;
   justify-content: center;
-  padding: 1% 2%;
+  padding: 100px 2% 1% 2%;
   background-size: cover;
 
   @media (max-width: 800px) {
@@ -27,7 +27,7 @@ const BannerWrapper = styled.div`
 
 const Form = styled.form`
   display: flex;
-  width: 90%;
+  width: 50%;
   margin: auto;
 
   & input {
@@ -41,7 +41,6 @@ const Form = styled.form`
   }
 `;
 
-/********** FUNCTION ***********/
 function LaunchBanner() {
   //add same logic code we have used to build and populate the rows
   const [movie, setMovie] = useState([]);
@@ -88,7 +87,7 @@ function LaunchBanner() {
             name="email"
             placeholder="Add your email"
           />
-          <Button>GET STARTED</Button>
+          <Button to="/home" as={Link}>GET STARTED</Button>
         </Form>
       </BannerInfoContainer>
     </BannerWrapper>

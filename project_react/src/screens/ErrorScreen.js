@@ -3,6 +3,8 @@ import styled from "styled-components";
 import DefaultTemplate from "../templates/DefaultTemplate";
 import MainContainer from "../containers/MainContainer";
 
+//error page to be loaded when a path is not recognizable by the route
+
 const PageWrapper = styled(MainContainer)`
   height: 80vh;
   background-color: var(--dk-color);

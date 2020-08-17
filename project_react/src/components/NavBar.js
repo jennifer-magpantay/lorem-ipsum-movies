@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import Menu from './Menu';
 
-//navbar component that will appear in all screens
-//add to the navbar a responsive menu
-//it will be imported by DefaultTemplate
+//navbar component that will appear in all screens - it will be imported by DefaultTemplate
 //{ Link } has been added to keep the SPA properties
-const NavWrapper = styled.div`
+//add to the navbar a responsive menu
+
+const NavWrapper = styled.nav`
   display: flex;
   width: 100%;
   height: 100px;
-  align-items: center;
   padding: 1% 2%;
+  position: fixed;
+  top: 0;
+  align-items: center;  
   justify-content: space-between;
   background-color: var(--black);
+  z-index: 1;
 `;
 
 const LogoImage = styled.img`

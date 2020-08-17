@@ -4,6 +4,9 @@ import Banner from '../components/Banner';
 import Row from '../components/Row';
 import requests from '../requests';
 
+//this is the screen will be loaded once the login is done
+//it holds the banner with random selection and thw rows of each category of movies
+
 function HomeScreen() {
   return (
     <DefaultTemplate>
