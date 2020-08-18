@@ -20,14 +20,32 @@ const BannerWrapper = styled.div`
   padding: 100px 2% 1% 2%;
   background-size: cover;
 
-  & h1,
-  h2 {
+  & h1 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  & h2 {
+    width: 60%;
+    font-size: 1.25em;
+    font-weight: normal;
     text-align: left;
   }
 
   @media (max-width: 800px) {
     height: 95vh;
     padding-bottom: 2%;
+
+    & h1 {
+      font-size: 1.25em;
+      text-align: left;
+    }
+
+    & h2 {
+      width: 85%;
+      font-size: 1.15em;
+      text-align: left;
+    }
   }
 `;
 
@@ -57,7 +75,6 @@ const Frame = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-   
   }
 
   @media (max-width: 800px) {
@@ -66,12 +83,11 @@ const Frame = styled.div`
     padding-bottom: 60%;
 
     & iframe {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;   
-  }
-    
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 `;
 
@@ -157,7 +173,7 @@ function Banner() {
           <mark>{movie?.title || movie?.name || movie?.original_name}</mark>
         </h1>
         <h2>
-          <mark>{truncate(movie?.overview, 120)}</mark>
+          <mark>{truncate(movie?.overview, 130)}</mark>
         </h2>
         <ButtonWrapper>
           <Button onClick={() => handleClick(movie)}>PLAY</Button>

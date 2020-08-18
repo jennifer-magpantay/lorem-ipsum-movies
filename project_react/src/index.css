@@ -39,28 +39,6 @@ img {
   margin: 5px 20px 5px 5px;
 }
 
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  font-size: 1.25em;
-  font-weight: normal;
-}
-
-h3 {
-  font-size: 1em;
-}
-
-h4 {
-  letter-spacing: 1px;
-}
-
-h5 {
-  font-weight: normal;
-  letter-spacing: 0.1em;
-}
-
 hr {
   width: 98%;
   margin-top: 1%;
@@ -140,26 +118,10 @@ label {
 
 /********** @MEDIA SCREEN | QUERIES **********/
 @media only screen and (max-width: 800px) {
-  h1 {
+ 
+
+  li {
     font-size: 1em;
   }
 
-  h2 {
-    font-size: 0.90em;
-  }
-
-  h3 {
-    font-size: 0.85em;
-  }
-
-  h4,
-  li,
-  p,
-  label {
-    font-size: 0.80em;
-  }
-
-  h5 {
-    font-size: 0.75em;
-  }
 }

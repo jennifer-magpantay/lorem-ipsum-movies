@@ -8,10 +8,13 @@ const Button = styled.button`
   padding: 12px 20px;
   margin-right: 1%;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   background-color: var(--blue);
   border: none;
   border-radius: 4px;
+  -webkit-box-shadow: -4px 10px 13px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 10px 13px -12px rgba(0,0,0,0.75);
+box-shadow: -4px 10px 13px -12px rgba(0,0,0,0.75);
   cursor: pointer;
   color: var(--white);
   transition: opacity 0.3s;

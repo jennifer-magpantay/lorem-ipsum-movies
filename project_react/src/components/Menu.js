@@ -15,6 +15,7 @@ const MenuStyled = styled.div`
   height: 2rem;
   top: 35px;
   right: 20px;
+  font-size: 14px;
   cursor: pointer;
   z-index: 20;
 

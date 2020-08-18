@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 const LinkNav = styled.ul`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row nowrap;  
+  padding-bottom: 10%;
   color: var(--lg-color);
   font-weight: 500;
 

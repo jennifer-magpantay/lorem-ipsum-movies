@@ -6,9 +6,9 @@ import MainContainer from "../containers/MainContainer";
 //error page to be loaded when a path is not recognizable by the route
 
 const PageWrapper = styled(MainContainer)`
-  height: 80vh;
+  height: 95vh;
   background-color: var(--dk-color);
-  padding: 5%;
+  padding: 150px 5% 5% 5%;
 
   @media (max-width: 800px) {
     height: 30vh;  

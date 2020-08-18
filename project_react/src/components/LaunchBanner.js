@@ -3,7 +3,7 @@ import axios from "../axios";
 import requests from "../requests";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import BannerInfoContainer from '../containers/BannerInfoContainer';
+import BannerInfoContainer from "../containers/BannerInfoContainer";
 import Button from "../components/Button";
 
 //banners will hold and display a background image of a ramdom movie from our db
@@ -19,9 +19,26 @@ const BannerWrapper = styled.div`
   padding: 100px 2% 1% 2%;
   background-size: cover;
 
+  & h1 {
+    font-size: 1.5em;
+  }
+
+  & h2 {
+    font-size: 1.25em;
+    font-weight: normal;
+  }
+
   @media (max-width: 800px) {
     height: 82vh;
     justify-content: left;
+
+    & h1 {
+      font-size: 1.25em;
+    }
+
+    & h2 {
+      font-size: 1.15em;
+    }
   }
 `;
 
@@ -29,6 +46,7 @@ const Form = styled.form`
   display: flex;
   width: 50%;
   margin: auto;
+  font-size: 14px;
 
   & input {
     margin-right: 1%;
@@ -37,7 +55,6 @@ const Form = styled.form`
   @media (max-width: 800px) {
     width: 100%;
     margin-bottom: 2%;
-    font-size: 12px;
   }
 `;
 
@@ -87,7 +104,9 @@ function LaunchBanner() {
             name="email"
             placeholder="Add your email"
           />
-          <Button to="/home" as={Link}>GET STARTED</Button>
+          <Button to="/home" as={Link}>
+            GET STARTED
+          </Button>
         </Form>
       </BannerInfoContainer>
     </BannerWrapper>

@@ -14,7 +14,11 @@ const FooterWrapper = styled.footer`
   background-color: var(--black);
   border-top: 1px solid var(--lg-color);
   color: var(--lg-color);
-  font-size: 0.75em;
+  font-size: 12px;
+  
+  & h4{
+    letter-spacing: 1px;
+  }
 
   @media (max-width: 800px) {
     display: block;
@@ -35,12 +39,9 @@ const ContentItem = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 5%;
+  width: 24px;
+  height: auto;
   margin: 0;
-
-  @media (max-width: 800px) {
-    width: 4%;
-  }
 `;
 
 function Footer() {
@@ -99,11 +100,11 @@ function Footer() {
       </ContentItem>
       <hr />
       <ContentItem>
-        <h5>
+        <p>
           Copyright &copy; 2020 Developed by Jennifer Magpantay using HTML5,
           CSS3 & React&nbsp;&nbsp;|&nbsp;&nbsp;Imersao React
           Alura&nbsp;&nbsp;|&nbsp;&nbsp;Clever Programmer
-        </h5>
+        </p>
       </ContentItem>
     </FooterWrapper>
   );
