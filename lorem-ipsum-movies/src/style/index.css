@@ -1,0 +1,100 @@
+/********** GLOBAL **********/
+* {
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --lg-color: #f2fff9;
+  --dk-color: #111111;
+  --blue: #56c7d3;
+  --warning: #ef3629;
+  --lg-gray: #bdc3c7;
+  --dk-gray: #2c3e50;
+  --box-shadow: rgba(0, 0, 0, 0.33);
+}
+
+/********** GLOBAL BASE | ALPHABETIC ORDER**********/
+img {
+  margin: 5px 20px 5px 5px;
+}
+
+hr {
+  width: 98%;
+  margin-top: 1%;
+  border-bottom: 1px solid var(--lg-color);
+}
+
+li {
+  display: inline;
+  padding-right: 15px;
+}
+
+mark {
+  padding: 0 1% 0 1%;
+  background-color: var(--dk-color);
+  color: var(--white);
+  line-height: inherit;
+  opacity: 0.85;
+}
+
+/********** FORMS **********/
+.form-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-col-input {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.form-col-reference {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--lg-gray);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  margin-top: 3px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  transition: opacity 0.3s;
+  opacity: 0.5;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/********** @MEDIA SCREEN | QUERIES **********/
+@media only screen and (max-width: 800px) {
+  li {
+    font-size: 1em;
+  }
+}
